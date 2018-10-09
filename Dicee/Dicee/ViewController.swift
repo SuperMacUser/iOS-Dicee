@@ -21,15 +21,29 @@ class ViewController: UIViewController {
 
     @IBAction func rollDice(_ sender: Any) {
         
-        let randomDiceLeft = Int.random(in: 1 ... 6)
-        let randomDiceRight = Int.random(in: 1 ... 6)
+//        // Another solution
+//
+//        let diceArray:[String] = ["dice1","dice2","dice3","dice4"
+//        ,"dice5","dice6"]
+//
+//        let randomDiceLeft = Int.random(in: 0 ... 5)
+//        let randomDiceRight = Int.random(in: 0 ... 5)
+//
+//        diceLeft.image = UIImage(named: diceArray[randomDiceLeft])
+//        diceRight.image = UIImage (named: diceArray[randomDiceRight])
         
-        diceLeft.image = UIImage(named: "dice\(randomDiceLeft)")
-        diceRight.image = UIImage (named: "dice\(randomDiceRight)")
         
-//        print(randomDiceLeft)
-//        print(randomDiceRight)
-//        print("")
+        
+//        // Clean and nice solution
+//        let randomDiceLeft = Int.random(in: 1 ... 6)
+//        let randomDiceRight = Int.random(in: 1 ... 6)
+//
+//        diceLeft.image = UIImage(named: "dice\(randomDiceLeft)")
+//        diceRight.image = UIImage (named: "dice\(randomDiceRight)")
+        
+        // Cleanest solution
+        diceLeft.image = UIImage(named: "dice\(Int.random(in: 1 ... 6))")
+        diceRight.image = UIImage(named: "dice\(Int.random(in: 1 ... 6))")
     }
 
 
